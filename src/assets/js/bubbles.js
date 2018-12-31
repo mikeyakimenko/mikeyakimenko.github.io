@@ -93,8 +93,6 @@ for (let i=0; i<11; i++) {
   const span = document.createElement('span')
   const animate = `moves ${randomNumber(6, 1)}s ease ${randomNumber(3, 1)}s infinite`
 
-  console.log(animate)
-  
   span.innerText = randomArrayElement(LABELS).toUpperCase()
 
   bubble.appendChild(span)

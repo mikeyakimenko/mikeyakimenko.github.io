@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="ru-RU">
+<head>
+<meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge, chrome=1">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+<title>{% block title %}{% endblock title %}Блог Михаила Якименко</title>
+
+<meta name="author" content="Михаил Якименко" />
+<link rel="shortcut icon" href="http://macgera.s3.amazonaws.com/mg-fav/mg-fav-16x16.png" type="image/x-icon" />
+<!-- Render -->
+<link rel="stylesheet" type="text/css" href="/static/css/font-awesome.min.css">
+
+{% if config.DEBUG %}
+  <link rel="stylesheet" type="text/css" href="/static/css/style.css">
+{% else %}
+  <link rel="stylesheet" type="text/css" href="/static/css/style.min.css">
+{% endif %}
+
+</head>
+<body>
+
+  <div class="bubbles"><div class="wrapper" id="bubbles"></div></div>
+
+  <div class="content-wrapper">
+    <div class="content">
+      <img src="/static/images/me.jpg" alt="" class="my-face">
+      <h1>Mike Yakimenko</h1>
+      <h3>Full stack developer (currently at Yggdrasil gaming)</h3>
+      <div class="social centered">
+        <a href="https://www.instagram.com/mikeyakimenko/" target="blank" class="link-icon instagram"></a>
+        <a href="https://www.facebook.com/mihael.yakimenko" target="blank" class="link-icon facebook"></a>
+        <a href="https://www.linkedin.com/in/myakimenko/" target="blank" class="link-icon linkedin"></a>
+        <a href="https://github.com/mikeyakimenko" target="blank" class="link-icon github"></a>
+      </div>
+    </div>
+  </div>
+
+  {% if config.DEBUG %}
+    <script src="/static/js/bundle.js"></script>
+  {% else %}
+    <script src="/static/js/bundle.min.js"></script>
+  {% endif %}
+
+</body>
+</html>
