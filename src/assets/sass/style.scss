@@ -1,4 +1,5 @@
 @import 'mixins/icon';
+@import 'mixins/mq';
 
 body {
   color: red;
@@ -23,6 +24,9 @@ h1, h3 {
   overflow-y: auto;
   @media (orientation: landscape) {
     display: block;
+  }
+  @include mq($md, $lg, $xl) {
+    display: flex;
   }
 }
 
